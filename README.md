@@ -1,0 +1,2 @@
+# bsisk
+Dokumentacja projektu BSiSK
