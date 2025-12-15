@@ -11,7 +11,7 @@
 
 ---
 
-![image](images/schamt.png)
+![Schemat](images/scheamt.png)
 
 ---
 
