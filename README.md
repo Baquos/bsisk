@@ -10,8 +10,8 @@
 > Projekt sieci korporacyjnej/kampusowej w GNS3 z redundancją L3 (OSPF, HSRP), segmentacją L2 (VLAN), oraz wyjściem do Internetu przez pfSense. Repozytorium zawiera konfiguracje urządzeń (R1–R5, S1–S2), projekt GNS3, testy bezpieczeństwa oraz diagramy.
 
 ---
-
-![Schemat](images/scheamt.png)
+## Schemat projektu
+![Schemat](images/schemat.png)
 
 ---
 
