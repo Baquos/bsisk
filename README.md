@@ -99,7 +99,7 @@ Adresacja punkt–punkt (P2P) między routerami:
 
 ## 7. Bezpieczeństwo
 - konfiguracja firewall rules na routerach CISCO i pfSense: [FIREWALL.md](FIREWALL.md)
-- Monitowanie routera przegowego funkcjami NGFW (Zenamore): https://dash.zenarmor.com
+- Monitowanie routera brzegowego funkcjami NGFW (Zenamore): https://dash.zenarmor.com
 
 ---
 
