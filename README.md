@@ -117,6 +117,24 @@ Szczegóły w pliku [SECURITY_TESTS.md](SECURITY_TESTS.md).
 - `show vlan brief` / `show interfaces trunk` – VLAN i trunk.
 - **pfSense**: logi firewall, OSPF neighbors.
 
+- HSRP - status uknown:
+  S1:
+  ```
+  conf t
+	no ip igmp snooping vlan 10
+	no ip igmp snooping vlan 20
+  ```
+
+  S2:
+  ```
+  conf t
+	no ip igmp snooping vlan 40
+	no ip igmp snooping vlan 50
+  ```
+
+- brak komunikacji TCP:
+	ustawić karty sieciowe w proxmox dla GNS3 VM na **Intel E1000**
+
 ---
 
 ## 10. Licencja
