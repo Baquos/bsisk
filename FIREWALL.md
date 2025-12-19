@@ -81,8 +81,20 @@ interface GigabitEthernet6/0.20
 ``` cmd
 ip access-list extended ACL_DMZ
  remark === DMZ (192.168.40.0/24) ===
- permit ip 192.168.40.0 0.0.0.255 192.168.30.0 0.0.0.255
- deny   ip 192.168.40.0 0.0.0.255 any
+ permit tcp 192.168.40.0 0.0.0.255 any established
+ permit icmp 192.168.40.0 0.0.0.255 192.168.10.0 0.0.0.255 echo-reply
+ permit icmp 192.168.40.0 0.0.0.255 192.168.20.0 0.0.0.255 echo-reply
+ remark --- BLOKADA INICJACJI DMZ -> ADM ---
+ deny tcp 192.168.40.0 0.0.0.255 192.168.10.0 0.0.0.255 eq 22
+ deny tcp 192.168.40.0 0.0.0.255 192.168.10.0 0.0.0.255 eq 80
+ deny tcp 192.168.40.0 0.0.0.255 192.168.10.0 0.0.0.255 eq 443
+ deny udp 192.168.40.0 0.0.0.255 192.168.10.0 0.0.0.255 eq 53
+
+ remark --- BLOKADA INICJACJI DMZ -> PC ---
+ deny tcp 192.168.40.0 0.0.0.255 192.168.20.0 0.0.0.255 eq 22
+ deny tcp 192.168.40.0 0.0.0.255 192.168.20.0 0.0.0.255 eq 80
+ deny tcp 192.168.40.0 0.0.0.255 192.168.20.0 0.0.0.255 eq 443
+ deny udp 192.168.40.0 0.0.0.255 192.168.20.0 0.0.0.255 eq 53
  remark =================================================
 
 interface GigabitEthernet6/0.40
